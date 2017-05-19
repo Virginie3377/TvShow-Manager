@@ -1,0 +1,39 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}WCSTvShowManagerBundle:TvShow{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <div class="page-header">
+
+        <h2>Liste des séries</h2>
+    </div>
+
+
+    <table class="table table-bordered">
+        <div class="col-sm-6 col-sm-offset-3">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Url</th>
+            <th>Year</th>
+        </tr>
+        </thead>
+    {% for tvShow in tvShow %}
+        <tr>
+               <td><a href="{{ path('show', {'id':tvShow.id}) }}">{{ tvShow.name }}</a></td>
+               <td>{{ tvShow.type }}</td>
+               <td>{{ tvShow.url }}</td>
+               <td>{{ tvShow.year }}</td>
+           </tr>
+
+        {% endfor %}
+
+    </div>
+    </table>
+        <div class="text-right">
+            <a href="{{ path('add') }}" class="btn bouton"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter une série</a>
+        </div>
+    </div>
+{% endblock %}

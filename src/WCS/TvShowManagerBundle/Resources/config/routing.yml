@@ -1,0 +1,19 @@
+wcs_tv_show_manager_homepage:
+    path:     /
+    defaults: { _controller: WCSTvShowManagerBundle:Default:index }
+
+wcs_tv_show_manager_index:
+    path:     /index
+    defaults: { _controller: WCSTvShowManagerBundle:TvShow:index }
+
+add:
+    path:     /add
+    defaults: { _controller: WCSTvShowManagerBundle:TvShow:add }
+
+show:
+    path:     /show/{id}
+    defaults: { _controller: WCSTvShowManagerBundle:TvShow:show }
+
+delete:
+    path:     /delete/{id}
+    defaults: { _controller: WCSTvShowManagerBundle:TvShow:delete }

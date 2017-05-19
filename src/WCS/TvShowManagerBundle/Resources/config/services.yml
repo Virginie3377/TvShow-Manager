@@ -1,0 +1,4 @@
+services:
+#    wcs_tv_show_manager.example:
+#        class: WCS\TvShowManagerBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

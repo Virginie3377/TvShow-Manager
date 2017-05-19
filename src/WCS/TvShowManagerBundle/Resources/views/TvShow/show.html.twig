@@ -1,0 +1,38 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}WCSTvShowManagerBundle:TvShow:show{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="page-header">
+        <h2>{{ tvShow.name }}</h2>
+    </div>
+    <table class="table table-bordered">
+        <td>{{ tvShow.type }}</td>
+        <td>{{ tvShow.url }}</td>
+        <td>{{ tvShow.year }}</td>
+    </table>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Season</th>
+            <th>Number</th>
+            <th>Note</th>
+        </tr>
+        </thead>
+        {% for episode in tvShow.episodes %}
+            <tr>
+                <td>{{ episode.name }}</td>
+                <td>{{ episode.season  }}</td>
+                <td>{{ episode.number  }}</td>
+                <td>{{ episode.note  }}</td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+    <div class="text-right">
+        <a href="{{ path('delete', {'id':tvShow.id}) }}" class="btn bouton"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Supprimer la série</a>
+    </div>
+{% endblock %}

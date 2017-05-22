@@ -5,13 +5,25 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
     </head>
     <body>
+    <nav class="navbar navbar-inverse header_bar">
+        <div class="container-fluid">
+            <a href="{{ path('wcs_tv_show_manager_index') }}"><div class="navbar-brand logo">SERIES</div></a>
+            <a href="{{ path('add') }}"><button type="button" class="btn btn-grey navbar-right">Ajouter une série</button></a>
+        </div>
+    </nav>
         {% block body %}{% endblock %}
         {% block javascripts %}
+            <script>
+                $('#myModal').on('shown.bs.modal', function () {
+                    $('#myInput').focus()
+                })
+            </script>
             <script src="{{ asset('js/jquery.js') }}"></script>
             <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         {% endblock %}

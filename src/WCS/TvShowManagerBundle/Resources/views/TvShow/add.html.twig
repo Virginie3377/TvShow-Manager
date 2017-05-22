@@ -3,13 +3,51 @@
 {% block title %}WCSTvShowManagerBundle:TvShow:add{% endblock %}
 
 {% block body %}
-    <div class="container">
-    <div class="page-header">
-        <h2>Ajouter une série</h2>
-    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel">
+                <div class="panel-body">
+                    {{ form_start(my_form, {'attr': {'class': 'form-horizontal'}}) }}
 
-<div class="form-group">
-    {{ form(my_form) }}
-</div>
+                    <div class="form-group">
+                        {{ form_label(my_form.name, "Nom", {'label_attr': {'class': 'col-md-2 control-label'}}) }}
+                        {{ form_errors(my_form.name) }}
+                        <div class="col-md-10">
+                        {{ form_widget(my_form.name, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(my_form.type, "Type", {'label_attr': {'class': 'col-md-2 control-label'}}) }}
+                        {{ form_errors(my_form.type) }}
+                        <div class="col-md-10">
+                            {{ form_widget(my_form.type, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(my_form.url, "URL", {'label_attr': {'class': 'col-md-2 control-label'}}) }}
+                        {{ form_errors(my_form.url) }}
+                        <div class="col-md-10">
+                            {{ form_widget(my_form.url, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(my_form.year, "Year", {'label_attr': {'class': 'col-md-2 control-label'}}) }}
+                        {{ form_errors(my_form.year) }}
+                        <div class="col-md-10">
+                            {{ form_widget(my_form.year, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    {{ form_widget(my_form.Enregistrer, {'attr': {'class': 'btn btn-grey navbar-right', 'value': 'Enregistrer'}}) }}
+                    {{ form_end(my_form) }}
+
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
 {% endblock %}

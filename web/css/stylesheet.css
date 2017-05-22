@@ -1,0 +1,76 @@
+body {
+    background-color: dimgrey;
+}
+.btn-grey{
+    border-color:grey;
+    background:white;
+    border-radius: 5px;
+    color:black;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-family: "Caviar Dreams";
+    text-transform: uppercase;
+
+}
+.btn-grey:hover{
+    background:orangered;
+    color: white;
+
+}
+
+.header_bar {
+    border-radius: 0px;
+    height: 80px;
+}
+.header_bar main {
+    margin-top: 0px;
+}
+.header_bar .navbar-nav li a.active {
+    color: #ec3a3e;
+}
+
+.navbar-inverse .navbar-brand{
+    font-size: 40px;
+    color: white;
+    margin-top: 10px;
+    font-family: "Caviar Dreams";
+
+}
+.logo{
+    padding-left: 90px;
+}
+
+/*----------------------
+Product Card Styles
+----------------------*/
+
+.panel {
+    background: white;
+}
+
+.title {
+    padding-left: 20px;
+    font-family: "impact";
+    font-size: 20px;
+    text-transform: uppercase;
+    color: orangered;
+}
+
+.title a{
+    color: orangered;
+}
+
+.year{
+    padding: 20px 20px 0px 20px;
+    font-family: Impact;
+    font-size: 20px;
+}
+
+.type {
+    padding: 20px 20px 0px 20px;
+    font-family: "impact";
+    font-size: 20px;
+    text-transform: uppercase;
+    color: darkgrey;
+
+}

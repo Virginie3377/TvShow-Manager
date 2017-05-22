@@ -3,36 +3,44 @@
 {% block title %}WCSTvShowManagerBundle:TvShow:show{% endblock %}
 
 {% block body %}
-<div class="container">
-    <div class="page-header">
-        <h2>{{ tvShow.name }}</h2>
-    </div>
-    <table class="table table-bordered">
-        <td>{{ tvShow.type }}</td>
-        <td>{{ tvShow.url }}</td>
-        <td>{{ tvShow.year }}</td>
-    </table>
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Season</th>
-            <th>Number</th>
-            <th>Note</th>
-        </tr>
-        </thead>
-        {% for episode in tvShow.episodes %}
-            <tr>
-                <td>{{ episode.name }}</td>
-                <td>{{ episode.season  }}</td>
-                <td>{{ episode.number  }}</td>
-                <td>{{ episode.note  }}</td>
-            </tr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="col-md-4 type"> {{ tvShow.type }}</div>
+                            <div class="col-md-2 col-md-offset-5 year">{{ tvShow.year }}</div>
+                                <div class="col-md-12 panelTop">
+                                    <img class="img-responsive" src="{{ tvShow.url }}"/>
+                                </div>
+                            <div class="col-md-12 title">Episodes de {{ tvShow.name }}</div>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Season</th>
+                                            <th>Number</th>
+                                            <th>Note</th>
+                                        </tr>
+                                    </thead>
+                                {% for episode in tvShow.episodes %}
+                                    <tr>
+                                        <td>{{ episode.name }}</td>
+                                        <td>{{ episode.season  }}</td>
+                                        <td>{{ episode.number  }}</td>
+                                        <td>{{ episode.note  }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </table>
+                            <a href="{{ path('wcs_tv_show_manager_index') }}"><button type="button" class="btn btn-grey navbar-right">Ok</button></a>
+                        <a href="{{ path('delete', {'id':tvShow.id}) }}"><button type="button" class="btn btn-grey navbar-right">Supprimer</button></a>
+                        <a href="{{ path('modify', {'id':tvShow.id}) }}"><button type="button" class="btn btn-grey navbar-right">Modifier</button></a>
 
-        {% endfor %}
 
-    </table>
-    <div class="text-right">
-        <a href="{{ path('delete', {'id':tvShow.id}) }}" class="btn bouton"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Supprimer la série</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 {% endblock %}

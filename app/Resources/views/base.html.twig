@@ -14,10 +14,22 @@
     <nav class="navbar navbar-inverse header_bar">
         <div class="container-fluid">
             <a href="{{ path('wcs_tv_show_manager_index') }}"><div class="navbar-brand logo">SERIES</div></a>
+            <a href="{{ path('tri') }}"><button type="button" class="btn btn-grey navbar-right">Séries préférées</button></a>
             <a href="{{ path('add') }}"><button type="button" class="btn btn-grey navbar-right">Ajouter une série</button></a>
         </div>
     </nav>
         {% block body %}{% endblock %}
+
+    <footer>
+        <div class="footer container-fluid">
+
+                <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+
+        </div>
+    </footer>
+
         {% block javascripts %}
             <script>
                 $('#myModal').on('shown.bs.modal', function () {
@@ -26,6 +38,7 @@
             </script>
             <script src="{{ asset('js/jquery.js') }}"></script>
             <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+            <script src="https://use.fontawesome.com/a0230d6244.js"></script>
         {% endblock %}
     </body>
 </html>

@@ -1,0 +1,32 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}WCSTvShowManagerBundle:TvShow:add{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel">
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Note</th>
+                        </tr>
+                        </thead>
+                        {% for name in moyNotes|keys %}
+                            <tr>
+                            <td>{{ name }}</td>
+                                <td>{{ moyNotes[name] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <a href="{{ path('wcs_tv_show_manager_index') }}"><button type="button" class="btn btn-grey navbar-right">Ok</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

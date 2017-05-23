@@ -18,3 +18,20 @@ modify:
 delete:
     path:     /delete/{id}
     defaults: { _controller: WCSTvShowManagerBundle:TvShow:delete }
+
+addEpisode:
+    path:     /addEpisode/{tvShow_id}
+    defaults: { _controller: WCSTvShowManagerBundle:Episode:add }
+
+deleteEpisode:
+    path:     /deleteEpisode/{id}
+    defaults: { _controller: WCSTvShowManagerBundle:Episode:delete }
+
+modifyEpisode:
+    path:     /modifyEpisode/{id}
+    defaults: { _controller: WCSTvShowManagerBundle:Episode:modify }
+
+
+tri:
+    path:     /tri
+    defaults: { _controller: WCSTvShowManagerBundle:TvShow:tri }

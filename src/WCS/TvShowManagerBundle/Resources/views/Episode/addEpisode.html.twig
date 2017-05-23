@@ -1,0 +1,53 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}WCSTvShowManagerBundle:Episode:add{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel">
+                    <div class="panel-body">
+                        {{ form_start(my_formulaire, {'attr': {'class': 'form-horizontal'}}) }}
+
+                        <div class="form-group">
+                            {{ form_label(my_formulaire.name, "Nom", {'label_attr': {'class': 'col-md-2 control-label'}}) }}
+                            {{ form_errors(my_formulaire.name) }}
+                            <div class="col-md-10">
+                                {{ form_widget(my_formulaire.name, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            {{ form_label(my_formulaire.season, "Saison", {'label_attr': {'class': 'col-md-2 control-label'}}) }}
+                            {{ form_errors(my_formulaire.season) }}
+                            <div class="col-md-10">
+                                {{ form_widget(my_formulaire.season, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            {{ form_label(my_formulaire.number, "Numéro", {'label_attr': {'class': 'col-md-2 control-label'}}) }}
+                            {{ form_errors(my_formulaire.number) }}
+                            <div class="col-md-10">
+                                {{ form_widget(my_formulaire.number, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            {{ form_label(my_formulaire.note, "Note", {'label_attr': {'class': 'col-md-2 control-label'}}) }}
+                            {{ form_errors(my_formulaire.note) }}
+                            <div class="col-md-10">
+                                {{ form_widget(my_formulaire.note, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        {{ form_widget(my_formulaire.Enregistrer, {'attr': {'class': 'btn btn-grey navbar-right', 'value': 'Enregistrer'}}) }}
+                        {{ form_end(my_formulaire) }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

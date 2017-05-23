@@ -1,5 +1,6 @@
 body {
     background-color: dimgrey;
+   
 }
 .btn-grey{
     border-color:grey;
@@ -18,7 +19,7 @@ body {
 
 }
 
-.header_bar {
+.header_bar,.footer {
     border-radius: 0px;
     height: 80px;
 }
@@ -39,7 +40,21 @@ body {
 .logo{
     padding-left: 90px;
 }
+.footer{
+    background-color: darkgrey;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
 
+}
+.fa-3x{
+    margin-left: 20px;
+}
+h2,h4{
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Caviar Dreams";
+}
 /*----------------------
 Product Card Styles
 ----------------------*/
@@ -73,4 +88,11 @@ Product Card Styles
     text-transform: uppercase;
     color: darkgrey;
 
+}
+.episode{
+    margin-top: 20px;
+
+}
+.fa {
+    color: orangered;
 }
